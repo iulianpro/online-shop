@@ -46,6 +46,11 @@ body {
     border: 1px solid black;
 }
 
+.btn-outline-black:hover, .btn-outline-black:active, .btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 .shop-now-button:hover, .shop-now-button:active, .shop-now-button:focus, .btn-black:hover, .btn-black:active, .btn-black:focus {
     background: #222;
     color: white;
@@ -73,16 +78,6 @@ body {
     z-index: -1;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
 a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -96,8 +91,18 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link, .update-link, .remove-item {
     cursor: pointer;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -114,6 +119,8 @@ a.category-badge>span.badge:hover {
         padding-top: 164px;
     }
 }
+
+/* pad the top a bit when navbar is collapsed on mobile */
 
 @media (max-width: 991px) {
     .header-container {
